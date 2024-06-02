@@ -1,0 +1,237 @@
+/* Resetovanje osnovnih stilova */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stilovi za meni */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFA500;
+}
+
+/* Stilovi za hamburger meni */
+#menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#menu-toggle:hover {
+    color: #FFA500;
+}
+
+/* Stilovi za ikonicu linije hamburger menija */
+#menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Animacija za linije hamburger menija */
+#menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Stilovi za baner */
+.banner {
+    height: 300px;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Stilovi za naslov */
+h1 {
+    animation: glow 2s infinite alternate;
+}
+
+/* Stilovi za efekat fade-in */
+.fade-in {
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+
+/* Stilovi za kontakt formu */
+.contact-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #FFA500;
+}
+
+/* Responsivnost */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: block;
+    }
+
+    #menu-toggle {
+        display: block;
+        float: right;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+    .banner {
+        height: 200px;
+    }
+}
+
+/* Stil za slider */
+.banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px; /* Prilagodite visinu prema potrebi */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+}
+
+/* Stil za galeriju */
+.galerija {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+/* Stil za kartice */
+.kartice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.kartica {
+    flex: 1 1 calc(25% - 20px); /* 25% širine ekrana minus razmak između kartica */
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.slika {
+    width: 100%; /* Smanjivanje slika na širinu kartice */
+    height: auto;
+    aspect-ratio: 4 / 3; /* Odnos stranica 4:3 */
+}
+
+.opis {
+    text-align: center;
+}
+
+/* Medija upit za mobilne uređaje */
+@media screen and (max-width: 600px) {
+    .kartica {
+        flex-basis: 100%; /* Kartice će zauzimati celi red */
+    }
+
+    .slika {
+        width: calc(100% - 20px); /* Širina slike je širina kartice minus padding */
+        height: auto;
+    }
+}
+
+ /* Stil za animaciju */
+ @keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+/* Stil za dobrodošlicu */
+.dobrodoslica {
+    animation: slideIn 2s ease-in-out; /* Animacija traje 2 sekunde */
+}
+
+img{
+    height: 30px;
+}
